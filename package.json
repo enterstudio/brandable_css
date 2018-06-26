@@ -7,7 +7,9 @@
     "dev": "npm run build -- --watch",
     "prepublish": "npm run build",
     "release": "npm version patch && git push && npm publish",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": "ryankshaw/brandable_css",
   "author": "Ryan Shaw <ryankshaw@gmail.com>",
@@ -36,12 +38,14 @@
     "node-sass": "^4.5.0",
     "postcss": "^6.0.1",
     "postcss-url": "^7.1.2",
-    "rev-hash": "^2.0.0"
+    "rev-hash": "^2.0.0",
+    "snyk": "^1.85.0"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-eslint": "^8.0.1",
     "babel-preset-env": "^1.1.11",
     "standard": "^10.0.2"
-  }
+  },
+  "snyk": true
 }
